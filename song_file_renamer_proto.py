@@ -1,8 +1,14 @@
 #First portion: find the targeted directory and change to it
 #also would like to have autocomplete for directory names
 
-protoString = ")(*&^$%#@!"
-bannedString
+bannedString = ")(*&^$%#@!"
+protoString = "This* i^s a prototy)pe str@ing!"
 
 
-protoString.find()
+for i in range(0, len(protoString)):
+	print("Hello, World!")
+	for j in range(0, len(bannedString)):
+		if(protoString[i]  == bannedString[j]):
+			print("found a <{}> at <{}>!".format(bannedString[j],i))
+
+#protoString.find()
