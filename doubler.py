@@ -11,7 +11,8 @@ import csv
 target = './output.csv'
 numdata = []
 
-def csvIngress(sheet,numlist):
+def csvIngress(sheet):
+    numlist = []
     with open(sheet) as f:
         readhead = csv.reader(f)
         for row in readhead:
@@ -19,7 +20,7 @@ def csvIngress(sheet,numlist):
                 numlist.append(int(row[col]))
     return numlist
 
-numdata = csvIngress(target, numdata)
+numdata = csvIngress(target)
 
 # Basic arithmetic operation (simulates manipulation by algorithm)
 for i in range(len(numdata)):
