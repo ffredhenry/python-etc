@@ -14,13 +14,13 @@ import os
 destinationFile = "th}is i@s ou$r p{ro/%tot[ype st)rin*g"
 illegalCharList = """!@#$%^&*()<>,./:;|"'{}[]+=?"""
 
-print(destinationFile)
+print(destinationFile+"\n")
 list_dF = list(destinationFile)
 
 for i in range(0, len(list_dF)):
     for j in range(0, len(illegalCharList)):
         if(list_dF[i] == illegalCharList[j]):
-            print("found illegal {} at index #{}, now removing.".format(illegalCharList[j], i))
+            print("found illegal '{}' at index #{}, now removing.".format(illegalCharList[j], i))
             list_dF[i] = ''
 
 
